@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;600&display=swap');
+
+body {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Barlow Semi Condensed', 'sans serif';
+    color: white;
+    
+    .game {
+        padding: 20px;
+        flex-grow: 1;
+        background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .game-info {
+            border: 3px solid rgb(191 191 191 / 50%);
+            border-radius: 20px;
+            padding: 20px 0px;
+            max-width: 600px;
+            min-width: 400px;
+            display: flex;
+            flex-flow:row;
+            align-items: center;
+            justify-content: center;
+
+            &__text {
+                min-width: 250px;
+                width: 100%;
+                letter-spacing: -1px;
+
+                h1 {
+                    padding: 0px 30px;
+                }
+
+                &--uppercase {
+                    text-transform: uppercase;
+                }
+            }
+
+            &__score {
+                width: 100%;
+                padding: 0px 20px;
+
+                .box {
+                        min-height: 100px;
+                        background: white;
+                        border-radius: 20px;
+                        text-align: center;
+
+                    &__title {
+                        color: hsl(229, 64%, 46%);
+                        font-weight: bolder;
+                        text-transform: uppercase;
+                        padding-top: 8px;
+                        letter-spacing: 2px;
+                    }
+
+                    &__score {
+                        font-size: 55px;
+                        padding-bottom: 10px;
+                        color: hsl(229, 25%, 31%)
+                    }
+                }
+            }
+        }
+    }
+}
