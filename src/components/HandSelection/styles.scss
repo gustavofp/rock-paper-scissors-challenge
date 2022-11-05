@@ -1,0 +1,35 @@
+.hand-selection {
+    display: flex;
+    width: 375px;
+    height: 400px;
+    background-image: url(./bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: 0 40px !important;
+    background-size: contain;
+    flex-wrap: wrap;
+    
+
+    &__item {
+        &--first {
+            width: 50%;
+            text-align: left;
+            display: flex;
+            justify-content: left;
+        }
+
+        &--second {
+            width: 50%;
+            text-align: right;
+            display: flex;
+            justify-content: right;
+        }
+
+        &--third {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
