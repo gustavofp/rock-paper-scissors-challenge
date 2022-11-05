@@ -1,0 +1,48 @@
+.game-results {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 400px;
+    flex-wrap: wrap;
+
+    &__choice-text {
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    &__button {
+        background-color: white;
+        border: 0;
+        padding: 0;
+        height: 50px;
+        width: 100%;
+        font-family: 'Barlow Semi Condensed', 'sans serif';
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        cursor: pointer;
+    }
+
+    &__you {
+        width: 33%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__info {
+        width: 33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__cpu {
+        width: 33%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        flex-direction: column;
+    }
+}

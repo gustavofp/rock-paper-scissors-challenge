@@ -3,9 +3,17 @@ import PaperIcon from "./icon-paper.svg";
 import RockIcon from "./icon-rock.svg";
 import ScissorsIcon from "./icon-scissors.svg";
 import { useEffect, useState } from "react";
+import { useSetRecoilState } from "recoil";
+import { selectedHand } from "../../state";
 
-const Hand = ({ type }) => {
+const Hand = ({ type, clickable = true }) => {
   const [icon, setIcon] = useState();
+  const setSelectedHand = useSetRecoilState(selectedHand);
+
+  const handleSelection = (type) => {
+    if (!clickable) return;
+    setSelectedHand(type);
+  };
 
   const getIcon = (type) => {
     switch (type) {
@@ -26,9 +34,11 @@ const Hand = ({ type }) => {
   }, [type]);
 
   return (
-    <div className={`hand hand--${type}`}>
-      <img className={`hand__icon`} src={icon} />
-    </div>
+    <a onClick={(e) => handleSelection(type)}>
+      <div className={`hand hand--${type}`}>
+        <img className={`hand__icon`} src={icon} />
+      </div>
+    </a>
   );
 };
 
